@@ -33,7 +33,7 @@ function arrshow ( $array, $debug = TRUE )
 		$output .= '[' . $_key . '] => '.$value . '</br>';
 	}
 	
-	if ( !!$debug )
+	if ( $debug )
 		die ( $output );
 	else
 		return $output;
