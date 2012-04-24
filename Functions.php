@@ -263,7 +263,10 @@ function uri_seg ( $num )
 {
 	$url = $_SERVER['REQUEST_URI'];
 	
-	$url = str_replace( URI_SPLIT , "" , $url) ;
+	// I use this for setting a constant ina  config file
+	// so for example I have this project in a dev folder
+	// I don't want to have reference Dev so I remove this by say the 1st segment
+	//$url = str_replace( URI_SPLIT , "" , $url) ;
 	
 	$uri = preg_split( '[\\/]', $url, -1, PREG_SPLIT_NO_EMPTY );	
 	
